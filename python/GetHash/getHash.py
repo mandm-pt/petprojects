@@ -4,7 +4,7 @@ import os.path
 from colorama import init, Fore
 # init colorama
 init()
-supported_hashes = ['md5', 'sha1', 'sha256', 'sha512', 'sha384']
+supported_hashes = ['md5', 'sha1', 'sha256', 'sha512', 'sha3-256', 'sha3-512']
 
 
 def calculate_hash(input, hash_types=supported_hashes, compare_hash=None):
@@ -20,12 +20,14 @@ def calculate_hash(input, hash_types=supported_hashes, compare_hash=None):
             hash_obj = hashlib.sha256()
         elif hash_type == 'sha512':
             hash_obj = hashlib.sha512()
-        elif hash_type == 'sha384':
-            hash_obj = hashlib.sha384()
+        elif hash_type == 'sha3-256':
+            hash_obj = hashlib.sha3_256()
+        elif hash_type == 'sha3-512':
+            hash_obj = hashlib.sha3_512()
 
         hash_obj.update(input)
         current_hash = hash_obj.hexdigest()
-        print((Fore.LIGHTMAGENTA_EX + '{} \t ' + Fore.WHITE + '{}').format(hash_type, current_hash))
+        print((Fore.LIGHTMAGENTA_EX + '{}\t' + Fore.WHITE + '{}').format(hash_type, current_hash))
 
         if compare_hash is not None:
             if compare_hash == current_hash:
