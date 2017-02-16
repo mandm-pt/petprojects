@@ -27,13 +27,16 @@ def calculate_hash(input, hash_types=supported_hashes, compare_hash=None):
 
         hash_obj.update(input)
         current_hash = hash_obj.hexdigest()
-        print((Fore.LIGHTMAGENTA_EX + '{:<9}' + Fore.RESET + '{}').format(hash_type, current_hash))
+
+        result_str = (Fore.LIGHTMAGENTA_EX + '{:<9}' + Fore.RESET + '{}').format(hash_type, current_hash)
 
         if compare_hash is not None:
             if compare_hash == current_hash:
-                print(Fore.LIGHTGREEN_EX + 'Hash match!')
+                print(Fore.LIGHTGREEN_EX + 'OK ' + result_str)
             else:
-                print(Fore.LIGHTRED_EX + 'Hash do not match!')
+                print(Fore.LIGHTRED_EX + 'XX ' + result_str)
+        else:
+            print(result_str)
 
 
 parser = argparse.ArgumentParser(description='Calculate hash of a file or string.', add_help=True)
