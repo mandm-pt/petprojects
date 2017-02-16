@@ -2,13 +2,13 @@ import hashlib
 import argparse
 import os.path
 from colorama import init, Fore
+
 # init colorama
 init()
 supported_hashes = ['md5', 'sha1', 'sha256', 'sha512', 'sha3-256', 'sha3-512']
 
 
 def calculate_hash(input, hash_types=supported_hashes, compare_hash=None):
-
     hash_types = supported_hashes if hash_types is None else [hash_types]
 
     for hash_type in hash_types:
@@ -27,7 +27,7 @@ def calculate_hash(input, hash_types=supported_hashes, compare_hash=None):
 
         hash_obj.update(input)
         current_hash = hash_obj.hexdigest()
-        print((Fore.LIGHTMAGENTA_EX + '{}\t' + Fore.WHITE + '{}').format(hash_type, current_hash))
+        print((Fore.LIGHTMAGENTA_EX + '{:<9}' + Fore.RESET + '{}').format(hash_type, current_hash))
 
         if compare_hash is not None:
             if compare_hash == current_hash:
