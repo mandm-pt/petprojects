@@ -1,6 +1,6 @@
 # Title
 
-Basic script that calculates hashs of either file or text.
+Basic script that calculates/generates the hash of either a file or text.
 
 # Usage
 
