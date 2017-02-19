@@ -4,8 +4,9 @@ Basic script that calculates/generates the hash of either a file or text.
 
 # How to run the code
 
-Just make sure you have python 3.6.0 installed (I haven't tested in other versions)
-Install the colorama package
+Just make sure you have python 3.6.0 installed (I haven't tested with other versions).
+Make sure you have the colorama package. 
+You can install colorama via pip (Python Packaging Index)
 
 ```
 pip install colorama
