@@ -6,10 +6,10 @@ Basic script that calculates/generates the hash of either a file or text.
 
 Just make sure you have python 3.6.0 installed (I haven't tested in other versions)
 Install the colorama package
-dd
-'
+
+```
 pip install colorama
-'d
+```
 
 # Usage
 
