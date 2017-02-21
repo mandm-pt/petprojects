@@ -1,6 +1,7 @@
 import hashlib
 import argparse
 import os.path
+import sys
 from colorama import init, Fore
 
 # init colorama
@@ -33,8 +34,12 @@ def calculate_hash(input, hash_types=supported_hashes, compare_hash=None):
         if compare_hash is not None:
             if compare_hash == current_hash:
                 print(Fore.LIGHTGREEN_EX + 'OK ' + result_str)
+                if len(hash_types) == 1:
+                    return sys.exit(0)
             else:
                 print(Fore.LIGHTRED_EX + 'XX ' + result_str)
+                if len(hash_types) == 1:
+                    return sys.exit(1)
         else:
             print(result_str)
 
