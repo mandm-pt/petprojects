@@ -16,13 +16,11 @@ pip install colorama
 ## Note
 
 This code is just to academic purposes
-
 I've changed 1 or 2 lines of code, of the original office2john script in order to get the value back.
-
 if you really want to recover your lost password
 check:
-     office2john.py - https://github.com/magnumripper/JohnTheRipper/blob/unstable-jumbo/run/office2john.py
-     hashcat - https://hashcat.net/forum/thread-1291.html
+- office2john.py - https://github.com/magnumripper/JohnTheRipper/blob/unstable-jumbo/run/office2john.py
+- hashcat - https://hashcat.net/forum/thread-1291.html
 
 
 # Usage
