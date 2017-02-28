@@ -13,6 +13,16 @@ You can install colorama via pip (Python Packaging Index)
 pip install colorama
 ```
 
+Moreover, make sure you download Hashcat and put the folder beside the script:
+```
+|-crackdocx.py
+|-office2john.py
+|-hashcat-3.30
+	|-hashcat32.exe
+	|-hashcat64.exe
+	|-...
+```
+
 ## Note
 
 This code is just to academic purposes
