@@ -13,7 +13,7 @@ You can install colorama via pip (Python Packaging Index)
 pip install colorama
 ```
 
-Moreover, make sure you download Hashcat and put the folder beside the script:
+Moreover, make sure you download Hashcat (link below) and put the folder beside the script:
 ```
 |-crackdocx.py
 |-office2john.py
@@ -30,7 +30,7 @@ I've changed 1 or 2 lines of code, of the original office2john script in order t
 if you really want to recover your lost password
 check:
 - office2john.py - https://github.com/magnumripper/JohnTheRipper/blob/unstable-jumbo/run/office2john.py
-- hashcat - https://hashcat.net/forum/thread-1291.html
+- hashcat - https://hashcat.net/
 
 
 # Usage
